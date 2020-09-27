@@ -10,12 +10,12 @@ import java.lang.annotation.*;
 @Documented
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.ANNOTATION_TYPE})
+@Target({ ElementType.ANNOTATION_TYPE })
 public @interface Meta {
   /**
    * 拦截处理器类型.
    *
-   * @return Class<? extends Aspector>
+   * @return Arounder的实现类
    */
   Class<? extends Arounder> value();
 }
