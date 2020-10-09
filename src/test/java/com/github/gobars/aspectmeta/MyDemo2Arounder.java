@@ -3,13 +3,11 @@ package com.github.gobars.aspectmeta;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import java.lang.annotation.Annotation;
-
 @Slf4j
 @Component
-public class MyDemo2Arounder implements Arounder {
+public class MyDemo2Arounder implements Arounder<MyDemo2> {
   @Override
-  public Object around(Invoker invoker, Object[] args, Annotation annotation, Meta meta)
+  public Object around(Invoker invoker, Object[] args, MyDemo2 annotation, Meta meta)
       throws Throwable {
     log.info("around before: {}", annotation);
     try {

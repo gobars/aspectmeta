@@ -12,4 +12,6 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Meta(MyDemo2Arounder.class)
 @Target({ElementType.METHOD})
-public @interface MyDemo2 {}
+public @interface MyDemo2 {
+  String value() default "";
+}
